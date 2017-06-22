@@ -1,0 +1,58 @@
+{
+  "name": "ng-time-picker",
+  "version": "0.0.1",
+  "description": "Angular 4 Time Selector",
+  "license": "MIT",
+  "main": "dist/ng-time-picker.umd.js",
+  "modudle": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "start": "NODE_ENV=dev webpack-dev-server --quiet --port 9001 --content-base app --config app/webpack.config --open",
+    "lint": "tslint 'src/**/*.ts' 'app/**/*.ts'",
+    "clean": "rimraf dist",
+    "build": "npm-run-all --serial clean build:ngc build:umd build:app",
+    "build:ngc": "ngc -p tsconfig.ngc.json",
+    "build:umd": "NODE_ENV=prod webpack",
+    "build:app": "NODE_ENV=prod webpack --config app/webpack.config",
+    "upgrade": "npm-check-updates --upgradeAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArthurianX/ng-time-picker.git"
+  },
+  "author": "Kovacs Arthur <kovacs.arthur.kraid@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/ArthurianX/ng-time-picker/issues"
+  },
+  "homepage": "https://github.com/ng2-ui/parallax-scroll#readme",
+  "dependencies": {
+    "@angular/animations": "4.2.4"
+  },
+  "devDependencies": {
+    "@angular/common": "^4.2.4",
+    "@angular/compiler": "^4.2.4",
+    "@angular/compiler-cli": "^4.2.4",
+    "@angular/core": "^4.2.4",
+    "@angular/forms": "^4.2.4",
+    "@angular/http": "^4.2.4",
+    "@angular/platform-browser": "^4.2.4",
+    "@angular/platform-browser-dynamic": "^4.2.4",
+    "@angular/router": "^4.2.4",
+    "@types/node": "^7.0.13",
+    "angular2-template-loader": "^0.6.2",
+    "codelyzer": "^3.1.1",
+    "core-js": "^2.4.1",
+    "npm-check-updates": "^2.12.0",
+    "npm-run-all": "^4.0.2",
+    "raw-loader": "^0.5.1",
+    "rimraf": "^2.6.1",
+    "rxjs": "^5.4.1",
+    "strip-loader": "^0.1.2",
+    "ts-loader": "^2.2.0",
+    "tslint": "^5.4.3",
+    "typescript": "^2.3.4",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.5.0",
+    "zone.js": "^0.8.12"
+  }
+}
