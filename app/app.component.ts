@@ -3,7 +3,7 @@ import {Component} from '@angular/core'
 @Component({
   selector: 'my-app',
   template: `
-	  <art-timepicker [time]=""></art-timepicker>
+	  <art-timepicker></art-timepicker>
   `
 })
 export class AppComponent {}
